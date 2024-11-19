@@ -44,11 +44,23 @@
 
     }
    static void CreateFile() {
-        Console.WriteLine("Creating file content...");
+        Console.WriteLine("What is the name of your new file?");
+        string? path = Console.ReadLine();
+        if (path == null)
+        {
+            Console.WriteLine("Could not read from Console (/stdin)");
+            return;
+        }
+        using (System.IO.File.Create())
+        {
+            Console.WriteLine($"Created file: {path}");
+        }
+        
+       
    }
    static void ReadFile() {
         Console.WriteLine("Please specify file to read.");
-        string? path = Console.WriteLine();
+        string? path = Console.ReadLine();
             if (path == null)
             {
                 Console.WriteLine("Could not read from console (/stdin)");
