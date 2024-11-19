@@ -25,10 +25,10 @@
         switch (userInput)
         {
             case "create":
-                Console.WriteLine("Creating file content...");
+                CreateFile();
                 break;
             case "read":
-                Console.WriteLine("Reading file content...");
+                ReadFile();
                 break;
             case "quit":
                 Console.WriteLine("Exiting programme");
@@ -40,8 +40,14 @@
         Console.WriteLine($"User inputted {userInput}");
 }
 
+ 
 
     }
-
-
+   static void CreateFile() {
+        Console.WriteLine("Creating file content...");
+   }
+   static void ReadFile() {
+        Console.WriteLine("Reading file content...");
+   }
 }
+
