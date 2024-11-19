@@ -48,6 +48,23 @@
    }
    static void ReadFile() {
         Console.WriteLine("Reading file content...");
+       
+     
+try
+{
+             //Les av tekst fil "hello.txt"
+        string path = "hello.txt";
+        string content = System.IO.File.ReadAllText(path);
+       
+        // Print til konsollen.
+
+        Console.WriteLine (content);
+}
+catch (System.Exception)
+{
+        Console.WriteLine("File not found, please try again.");
+}
+
    }
 }
 
