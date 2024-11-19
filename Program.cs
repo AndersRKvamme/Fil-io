@@ -47,13 +47,17 @@
         Console.WriteLine("Creating file content...");
    }
    static void ReadFile() {
-        Console.WriteLine("Reading file content...");
-       
+        Console.WriteLine("Please specify file to read.");
+        string? path = Console.WriteLine();
+            if (path == null)
+            {
+                Console.WriteLine("Could not read from console (/stdin)");
+                return;
+            }
      
 try
 {
              //Les av tekst fil "hello.txt"
-        string path = "hello.txt";
         string content = System.IO.File.ReadAllText(path);
        
         // Print til konsollen.
